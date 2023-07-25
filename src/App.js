@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import Footer from "./components/Footer";
+import { Header } from "./components/Header";
+import MovieDetail from "./components/MovieDetail";
+import MovieList from "./components/MovieList";
+import PageNotFound from "./components/PageNotFound";
+import Search from "./components/Search";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+
+      <div className="dark:bg-slate-800">
+        <Routes>
+          <Route
+            path=""
+            element={<MovieList apiPath={"movie/now_playing"} />}
+          ></Route>
+          <Route path="movie/:id" element={<MovieDetail />}></Route>
+          <Route
+            path="movies/popular"
+            element={<MovieList apiPath={"movie/popular"} />}
+          ></Route>
+          <Route
+            path="movies/top"
+            element={<MovieList apiPath={"movie/top_rated"} />}
+          ></Route>
+          <Route
+            path="movies/upcoming"
+            element={<MovieList apiPath={"movie/upcoming"} />}
+          ></Route>
+
+          <Route
+            path="search"
+            element={<Search apiPath={"search/movie"} />}
+          ></Route>
+          <Route path="*" element={<PageNotFound />}></Route>
+        </Routes>
+      </div>
+
+      <Footer />
+    </>
   );
 }
 

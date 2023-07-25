@@ -1,0 +1,92 @@
+61388acf2b92aeaf3aff349f00da5c01
+base url : https://api.themoviedb.org/3/movie
+
+Search Movie:
+const options = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2MTM4OGFjZjJiOTJhZWFmM2FmZjM0OWYwMGRhNWMwMSIsInN1YiI6IjY0ODc0ODQ1OTkyNTljMDBjNWI1YzVlYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.M-cf6RwsqQ8v18wlLDCEU8lNF0vL-u6qqRPBw6xcSCg'
+  }
+};
+
+fetch('https://api.themoviedb.org/3/search/movie?query=test', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+
+  Now Playing:
+
+  const options = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2MTM4OGFjZjJiOTJhZWFmM2FmZjM0OWYwMGRhNWMwMSIsInN1YiI6IjY0ODc0ODQ1OTkyNTljMDBjNWI1YzVlYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.M-cf6RwsqQ8v18wlLDCEU8lNF0vL-u6qqRPBw6xcSCg'
+  }
+};
+
+fetch('https://api.themoviedb.org/3/movie/now_playing', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+
+
+  Popular:
+
+  const options = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2MTM4OGFjZjJiOTJhZWFmM2FmZjM0OWYwMGRhNWMwMSIsInN1YiI6IjY0ODc0ODQ1OTkyNTljMDBjNWI1YzVlYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.M-cf6RwsqQ8v18wlLDCEU8lNF0vL-u6qqRPBw6xcSCg'
+  }
+};
+
+fetch('https://api.themoviedb.org/3/movie/popular', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+
+
+  top rated:
+
+  const options = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2MTM4OGFjZjJiOTJhZWFmM2FmZjM0OWYwMGRhNWMwMSIsInN1YiI6IjY0ODc0ODQ1OTkyNTljMDBjNWI1YzVlYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.M-cf6RwsqQ8v18wlLDCEU8lNF0vL-u6qqRPBw6xcSCg'
+  }
+};
+
+fetch('https://api.themoviedb.org/3/movie/top_rated', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+
+  upcoming movies:
+  const options = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2MTM4OGFjZjJiOTJhZWFmM2FmZjM0OWYwMGRhNWMwMSIsInN1YiI6IjY0ODc0ODQ1OTkyNTljMDBjNWI1YzVlYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.M-cf6RwsqQ8v18wlLDCEU8lNF0vL-u6qqRPBw6xcSCg'
+  }
+};
+
+fetch('https://api.themoviedb.org/3/movie/upcoming', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+
+
+  Movie Details:
+  const options = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2MTM4OGFjZjJiOTJhZWFmM2FmZjM0OWYwMGRhNWMwMSIsInN1YiI6IjY0ODc0ODQ1OTkyNTljMDBjNWI1YzVlYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.M-cf6RwsqQ8v18wlLDCEU8lNF0vL-u6qqRPBw6xcSCg'
+  }
+};
+
+fetch('https://api.themoviedb.org/3/movie/test', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
